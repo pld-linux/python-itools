@@ -1,5 +1,5 @@
 %include        /usr/lib/rpm/macros.python
-%define		module itools
+%define		module	itools
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
