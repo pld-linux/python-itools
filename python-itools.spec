@@ -1,14 +1,14 @@
 %include        /usr/lib/rpm/macros.python
 %define		module itools
-Summary:	Itools - a Python package that encapsulates several Python tools
-Summary(pl):	Itools - zbiór narzêdzi dla Pythona
+Summary:	Python package that encapsulates several Python tools
+Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.2.1
+Version:	0.2.3
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
-# Source0-md5:	926e9acbce4ef0c2e90903ec8c16bb9b
+# Source0-md5:	84786209ccd21ee6b85d2e0a2177b2fb
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
