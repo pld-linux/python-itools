@@ -2,18 +2,18 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.4.6
-Release:	2
+Version:	0.5.0
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
-# Source0-md5:	67a1e769255072651b3ed5fa4fab1aa5
+# Source0-md5:	8b8e87d4b9b6f51f0a899be7803ee2f6
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq	python-modules
 Requires:	python-PyXML >= 0.8.2
-BuildRequires:	tetex-dvips
-BuildRequires:	tetex-latex
-BuildRequires:	tetex-format-latex
+#BuildRequires:	tetex-dvips
+#BuildRequires:	tetex-latex
+#BuildRequires:	tetex-format-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -23,17 +23,17 @@ Itools is a Python package that encapsulates several Python tools.
 %description -l pl
 Itools jest zbiorem narzêdzi dla Pythona.
 
-%package doc
-Summary:	Documentation for itools modules
-Summary(pl):	Dokumentacja do modu³ów pakietu itools
-Group:		Libraries/Python
-Requires:	%{name} = %{version}-%{release}
+#%%package doc
+#Summary:	Documentation for itools modules
+#Summary(pl):	Dokumentacja do modu³ów pakietu itools
+#Group:		Libraries/Python
+#Requires:	%{name} = %{version}-%{release}
 
-%description doc
-This package contains documentation for itools Python modules.
+#%%description doc
+#This package contains documentation for itools Python modules.
 
-%description doc -l pl
-Pakiet zawieraj±cy dokumentacjê dla modu³ów Pythona z pakietu itools.
+#%%description doc -l pl
+#Pakiet zawieraj±cy dokumentacjê dla modu³ów Pythona z pakietu itools.
 
 %package examples
 Summary:	Examples for itools modules
@@ -52,7 +52,7 @@ z pakietu itools.
 %setup -q -n %{module}-%{version}
 
 %build
-mkdir docs docs/catalog docs/workflow docs/xml
+mkdir docs docs/workflow docs/xml
 mv -f {CHANGES.txt,README.txt} docs
 mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
 mv -f xml/TODO.txt docs/xml
@@ -68,7 +68,7 @@ python setup.py install \
 	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
-%{__make} -C doc ps
+# %{__make} -C doc ps
 
 cp -a doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
@@ -83,9 +83,9 @@ rm -rf $RPM_BUILD_ROOT
 %{_bindir}/igettext.py
 %{py_sitescriptdir}/%{module}
 
-%files doc
-%defattr(644,root,root,755)
-%doc doc/itools.ps
+#%%files doc
+#%%defattr(644,root,root,755)
+#%%doc doc/itools.ps
 
 %files examples
 %defattr(644,root,root,755)
