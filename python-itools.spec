@@ -6,9 +6,13 @@ Version:	0.5.0
 Release:	2
 License:	GPL
 Group:		Libraries/Python
+# new versions (0.6.0 ATM):
+#Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
+# missing files (handlers.dot, l10n.dia) are in repository only (and BR graphviz,dia);
+# do maybe let's use official docs: http://www.ikaaro.org/download/itools-0.6.0.pdf
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
 # Source0-md5:	8b8e87d4b9b6f51f0a899be7803ee2f6
-URL:		http://sourceforge.net/projects/lleu/
+URL:		http://www.ikaaro.org/
 %pyrequires_eq	python-modules
 Requires:	python-PyXML >= 0.8.2
 #BuildRequires:	tetex-dvips
