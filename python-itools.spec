@@ -3,16 +3,17 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.3.0
-Release:	2
+Version:	0.4.1
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tgz
-# Source0-md5:	cd5cc2d1e0b4c29a6d828923d6999756
-Patch0:		%{module}-missing_xml.patch
+Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
+# Source0-md5:	86d1e60be77fb2c8a677648f3d409717
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
+BuildRequires:	tetex-dvips
+BuildRequires:	tetex-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -22,27 +23,54 @@ Itools is a Python package that encapsulates several Python tools.
 %description -l pl
 Itools jest zbiorem narzêdzi dla Pythona.
 
+%package doc
+Summary:	Documentation for itools modules
+Summary(pl):	Dokumentacja do modu³ów pakietu itools
+Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
+
+%description doc
+This package contains documentation for itools Python modules.
+
+%description doc -l pl
+Pakiet zawieraj±cy dokumentacjê dla modu³ów Pythona z pakietu itools.
+
+%package examples
+Summary:	Examples for itools modules
+Summary(pl):	Przyk³ady wykorzystania modu³ów pakietu itools
+Group:		Libraries/Python
+Requires:	%{name} = %{version}-%{release}
+
+%description examples
+This package contains examples for itools Python modules.
+
+%description examples -l pl
+Pakiet zawieraj±cy przyk³adowe programy wykorzystuj±ce modu³y Pythona
+z pakietu itools.
+
 %prep
 %setup -q -n %{module}-%{version}
-%patch0 -p1
 
 %build
 mkdir docs docs/catalog docs/workflow docs/xml
 mv -f {CHANGES.txt,README.txt} docs
-mv -f catalog/TODO.txt docs/catalog
 mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
-mv -f xml/{README.txt,TODO.txt} docs/xml
+mv -f xml/TODO.txt docs/xml
 CFLAGS="%{rpmcflags}"
 export CLFAGS
 python setup.py build_ext
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
+install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version}}
 
 python setup.py install \
         --root=$RPM_BUILD_ROOT \
 	--optimize=2
+
+%{__make} -C doc ps
+
+cp -a doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
 # find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
 
@@ -53,3 +81,11 @@ rm -rf $RPM_BUILD_ROOT
 %defattr(644,root,root,755)
 %doc docs/*
 %{py_sitescriptdir}/%{module}
+
+%files doc
+%defattr(644,root,root,755)
+%doc doc/itools.ps
+
+%files examples
+%defattr(644,root,root,755)
+%{_examplesdir}/%{name}-%{version}
