@@ -3,7 +3,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.4.6
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
