@@ -1,0 +1,12 @@
+diff -urN itools-0.3.0/setup.py itools-0.3.0_chng/setup.py
+--- itools-0.3.0/setup.py	2004-05-03 11:57:47.000000000 +0200
++++ itools-0.3.0_chng/setup.py	2004-05-10 17:51:51.812651896 +0200
+@@ -98,7 +98,7 @@
+       package_dir = {'itools': ''},
+       packages = ['itools', 'itools.catalog', 'itools.demo', 'itools.doc',
+                   'itools.examples', 'itools.handlers', 'itools.handlers.stl',
+-                  'itools.i18n', 'itools.resources', 'itools.workflow',
++                  'itools.i18n', 'itools.xml', 'itools.resources', 'itools.workflow',
+                   'itools.zope', 'itools.zope.zmi'],
+ ##      data_files = [('zope/zmi', ['zope/zmi/localroles.dtml'])],
+       cmdclass = {'build_py': build_py})
