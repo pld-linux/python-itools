@@ -2,12 +2,12 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.4.1
+Version:	0.4.3
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
-# Source0-md5:	86d1e60be77fb2c8a677648f3d409717
+# Source0-md5:	8c5c5234d9f174bb9441f941ec97535a
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
@@ -61,7 +61,7 @@ python setup.py build_ext
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version}}
+install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version},%{_bindir}}
 
 python setup.py install \
         --root=$RPM_BUILD_ROOT \
@@ -79,6 +79,7 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc docs/*
+%{_bindir}/igettext.py
 %{py_sitescriptdir}/%{module}
 
 %files doc
