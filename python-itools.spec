@@ -4,11 +4,12 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.3.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tgz
 # Source0-md5:	cd5cc2d1e0b4c29a6d828923d6999756
+Patch0:		%{module}-missing_xml.patch
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
@@ -23,6 +24,7 @@ Itools jest zbiorem narzêdzi dla Pythona.
 
 %prep
 %setup -q -n %{module}-%{version}
+%patch0 -p1
 
 %build
 mkdir docs docs/catalog docs/workflow docs/xml
