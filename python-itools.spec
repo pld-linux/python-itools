@@ -8,7 +8,7 @@ License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
 # Source0-md5:	e0aadd6779aa08231dddf37d4a529450
-Source1:	http://www.ikaaro.org/download/%{module}/%{module}-%{version}.pdf
+Source1:	http://www.ikaaro.org/download/itools/%{module}-%{version}.pdf
 # Source1-md5:	8eb29b3828c3df853021545077fe0429
 URL:		http://www.ikaaro.org/
 BuildRequires:	python
