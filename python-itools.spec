@@ -3,7 +3,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.4.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
@@ -71,7 +71,7 @@ python setup.py install \
 
 cp -a doc/examples/* $RPM_BUILD_ROOT%{_examplesdir}/%{name}-%{version}
 
-# find $RPM_BUILD_ROOT -type f -name "*.py" -exec rm -rf {} \;;
+find $RPM_BUILD_ROOT%{py_sitescriptdir} -type f -name "*.py" -exec rm -rf {} \;
 
 %clean
 rm -rf $RPM_BUILD_ROOT
