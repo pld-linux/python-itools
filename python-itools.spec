@@ -9,7 +9,7 @@ Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
 # Source0-md5:	19d24129691f6ca4c552ae0097f95c19
 URL:		http://sourceforge.net/projects/lleu/
-%pyrequires_eq  python-modules
+%pyrequires_eq	python-modules
 Requires:	python-PyXML >= 0.8.2
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-latex
@@ -65,7 +65,7 @@ rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{py_sitescriptdir},%{_examplesdir}/%{name}-%{version},%{_bindir}}
 
 python setup.py install \
-        --root=$RPM_BUILD_ROOT \
+	--root=$RPM_BUILD_ROOT \
 	--optimize=2
 
 %{__make} -C doc ps
