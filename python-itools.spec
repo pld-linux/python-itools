@@ -2,12 +2,12 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.4.3
-Release:	2
+Version:	0.4.4
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
-# Source0-md5:	8c5c5234d9f174bb9441f941ec97535a
+# Source0-md5:	19d24129691f6ca4c552ae0097f95c19
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
