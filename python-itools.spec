@@ -3,7 +3,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.6.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
@@ -22,7 +22,7 @@ Itools is a Python package that encapsulates several Python tools.
 %description -l pl
 Itools jest zbiorem narzêdzi dla Pythona.
 
-%%package doc
+%package doc
 Summary:	Documentation for itools modules
 Summary(pl):	Dokumentacja do modu³ów pakietu itools
 Group:		Libraries/Python
