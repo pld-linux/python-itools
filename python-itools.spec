@@ -2,15 +2,16 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.6.0
-Release:	2
+Version:	0.6.2
+Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
-# Source0-md5:	46b1e9de38fe1934429b47e129b24fb5
-Source1:	http://www.ikaaro.org/download/%{module}-%{version}.pdf
-# Source1-md5:	43a5a8a00a0dd1b4081d98e8003ce3c0
+# Source0-md5:	e0aadd6779aa08231dddf37d4a529450
+Source1:	http://www.ikaaro.org/download/%{module}/%{module}-%{version}.pdf
+# Source1-md5:	8eb29b3828c3df853021545077fe0429
 URL:		http://www.ikaaro.org/
+BuildRequires:	python
 %pyrequires_eq	python-modules
 Requires:	python-PyXML >= 0.8.2
 BuildArch:	noarch
