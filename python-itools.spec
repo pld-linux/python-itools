@@ -3,7 +3,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.5.0
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
@@ -16,6 +16,7 @@ Requires:	python-PyXML >= 0.8.2
 #BuildRequires:	tetex-format-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
+Obsoletes:	python-itools-doc
 
 %description
 Itools is a Python package that encapsulates several Python tools.
