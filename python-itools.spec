@@ -13,6 +13,7 @@ URL:		http://sourceforge.net/projects/lleu/
 Requires:	python-PyXML >= 0.8.2
 BuildRequires:	tetex-dvips
 BuildRequires:	tetex-latex
+BuildRequires:	tetex-format-latex
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
