@@ -3,12 +3,12 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.2.3
-Release:	2
+Version:	0.3.0
+Release:	1
 License:	GPL
 Group:		Libraries/Python
-Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
-# Source0-md5:	84786209ccd21ee6b85d2e0a2177b2fb
+Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tgz
+# Source0-md5:	cd5cc2d1e0b4c29a6d828923d6999756
 URL:		http://sourceforge.net/projects/lleu/
 %pyrequires_eq  python-modules
 Requires:	python-PyXML >= 0.8.2
@@ -26,7 +26,7 @@ Itools jest zbiorem narzêdzi dla Pythona.
 
 %build
 mkdir docs docs/catalog docs/workflow docs/xml
-mv -f {CHANGES.txt,README.txt,TODO.txt} docs
+mv -f {CHANGES.txt,README.txt} docs
 mv -f catalog/TODO.txt docs/catalog
 mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
 mv -f xml/{README.txt,TODO.txt} docs/xml
@@ -36,7 +36,7 @@ python setup.py build_ext
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{py_sitedir}
+install -d $RPM_BUILD_ROOT%{py_sitescriptdir}
 
 python setup.py install \
         --root=$RPM_BUILD_ROOT \
