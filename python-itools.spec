@@ -57,7 +57,7 @@ mv -f {CHANGES.txt,README.txt} docs
 mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
 mv -f xml/TODO.txt docs/xml
 CFLAGS="%{rpmcflags}"
-export CLFAGS
+export CFLAGS
 python setup.py build_ext
 
 %install
