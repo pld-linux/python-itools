@@ -4,7 +4,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
 Version:	0.2.3
-Release:	1
+Release:	2
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://dl.sourceforge.net/lleu/%{module}-%{version}.tar.gz
@@ -50,4 +50,4 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc docs/*
-%{py_sitedir}/%{module}
+%{py_sitescriptdir}/%{module}
