@@ -1,15 +1,16 @@
 %define		module	itools
+%define		pdf_ver 20050223
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.6.2
+Version:	0.7.4
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
-# Source0-md5:	e0aadd6779aa08231dddf37d4a529450
-Source1:	http://www.ikaaro.org/download/itools/%{module}-%{version}.pdf
-# Source1-md5:	8eb29b3828c3df853021545077fe0429
+# Source0-md5:	ce57a03e66aa90afb29faabdda934be2
+Source1:	http://www.ikaaro.org/download/itools/%{module}-%{pdf_ver}.pdf
+# Source1-md5:	2a4ebe821d1eaaf324393382337d614a
 URL:		http://www.ikaaro.org/
 BuildRequires:	python
 %pyrequires_eq	python-modules
@@ -53,10 +54,11 @@ z pakietu itools.
 cp %{SOURCE1} doc
 
 %build
-mkdir docs docs/workflow docs/xml
+mkdir docs 
+# docs/workflow docs/xml
 mv -f {CHANGES.txt,README.txt} docs
-mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
-mv -f xml/TODO.txt docs/xml
+# mv -f workflow/{HOWTO.txt,TODO.txt} docs/workflow
+# mv -f xml/TODO.txt docs/xml
 CFLAGS="%{rpmcflags}"
 export CFLAGS
 python setup.py build_ext
@@ -84,7 +86,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files doc
 %defattr(644,root,root,755)
-%doc doc/%{module}-%{version}.pdf
+%doc doc/%{module}-%{pdf_ver}.pdf
 
 %files examples
 %defattr(644,root,root,755)
