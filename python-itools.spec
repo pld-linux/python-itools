@@ -3,12 +3,12 @@
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.9.2
+Version:	0.9.3
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
-# Source0-md5:	dcd74d64aed4aa7b3bf1eadc83f50b05
+# Source0-md5:	de9ee2bdc82997c17000f95e23698b66
 Source1:	http://www.ikaaro.org/download/itools/%{module}-%{pdf_ver}.pdf
 # Source1-md5:	0da03e6f383e5037d63e9fc51d842274
 URL:		http://www.ikaaro.org/
