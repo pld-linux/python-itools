@@ -1,16 +1,16 @@
 %define		module	itools
-%define		pdf_ver 0.12.0
+%define		pdf_ver 20060321
 Summary:	Python package that encapsulates several Python tools
 Summary(pl):	Zbiór narzêdzi dla Pythona
 Name:		python-%{module}
-Version:	0.12.3
+Version:	0.13.2
 Release:	1
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
-# Source0-md5:	f0b6b3de727bbebaab260a91099beab5
-Source1:	http://www.ikaaro.org/download/itools/%{module}-%{pdf_ver}.pdf
-# Source1-md5:	eb21906c90964db7488834aa60e54cdf
+# Source0-md5:	3282dd8352ba9085b2fd1f5a8eb5c96e
+Source1:	http://www.ikaaro.org/documentation/%{module}-%{pdf_ver}.pdf
+# Source1-md5:	5e92187252f907f6ef7464b61e24b8fd
 Source2:	http://www.ikaaro.org/download/itools/%{module}-examples.tar.gz
 # Source2-md5:	c9a9759752bf7bc606e8fc7b24282f6b
 URL:		http://www.ikaaro.org/
