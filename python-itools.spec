@@ -1,7 +1,7 @@
 %define		module	itools
 %define		pdf_ver 20060321
 Summary:	Python package that encapsulates several Python tools
-Summary(pl):	Zbiór narzêdzi dla Pythona
+Summary(pl.UTF-8):   ZbiÃ³r narzÄ™dzi dla Pythona
 Name:		python-%{module}
 Version:	0.13.2
 Release:	1
@@ -23,32 +23,32 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 Itools is a Python package that encapsulates several Python tools.
 
-%description -l pl
-Itools jest zbiorem narzêdzi dla Pythona.
+%description -l pl.UTF-8
+Itools jest zbiorem narzÄ™dzi dla Pythona.
 
 %package doc
 Summary:	Documentation for itools modules
-Summary(pl):	Dokumentacja do modu³ów pakietu itools
+Summary(pl.UTF-8):   Dokumentacja do moduÅ‚Ã³w pakietu itools
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %%description doc
 This package contains documentation for itools Python modules.
 
-%description doc -l pl
-Pakiet zawieraj±cy dokumentacjê dla modu³ów Pythona z pakietu itools.
+%description doc -l pl.UTF-8
+Pakiet zawierajÄ…cy dokumentacjÄ™ dla moduÅ‚Ã³w Pythona z pakietu itools.
 
 %package examples
 Summary:	Examples for itools modules
-Summary(pl):	Przyk³ady wykorzystania modu³ów pakietu itools
+Summary(pl.UTF-8):   PrzykÅ‚ady wykorzystania moduÅ‚Ã³w pakietu itools
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
 %description examples
 This package contains examples for itools Python modules.
 
-%description examples -l pl
-Pakiet zawieraj±cy przyk³adowe programy wykorzystuj±ce modu³y Pythona
+%description examples -l pl.UTF-8
+Pakiet zawierajÄ…cy przykÅ‚adowe programy wykorzystujÄ…ce moduÅ‚y Pythona
 z pakietu itools.
 
 %prep
