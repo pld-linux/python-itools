@@ -1,7 +1,7 @@
 %define		module	itools
 %define		pdf_ver 20060321
 Summary:	Python package that encapsulates several Python tools
-Summary(pl.UTF-8):   Zbiór narzędzi dla Pythona
+Summary(pl.UTF-8):	Zbiór narzędzi dla Pythona
 Name:		python-%{module}
 Version:	0.13.2
 Release:	1
@@ -28,7 +28,7 @@ Itools jest zbiorem narzędzi dla Pythona.
 
 %package doc
 Summary:	Documentation for itools modules
-Summary(pl.UTF-8):   Dokumentacja do modułów pakietu itools
+Summary(pl.UTF-8):	Dokumentacja do modułów pakietu itools
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
@@ -40,7 +40,7 @@ Pakiet zawierający dokumentację dla modułów Pythona z pakietu itools.
 
 %package examples
 Summary:	Examples for itools modules
-Summary(pl.UTF-8):   Przykłady wykorzystania modułów pakietu itools
+Summary(pl.UTF-8):	Przykłady wykorzystania modułów pakietu itools
 Group:		Libraries/Python
 Requires:	%{name} = %{version}-%{release}
 
