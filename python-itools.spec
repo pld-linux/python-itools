@@ -4,7 +4,7 @@ Summary:	Python package that encapsulates several Python tools
 Summary(pl.UTF-8):	Zbiór narzędzi dla Pythona
 Name:		python-%{module}
 Version:	0.13.2
-Release:	2
+Release:	3
 License:	GPL
 Group:		Libraries/Python
 Source0:	http://www.ikaaro.org/download/itools/%{module}-%{version}.tar.gz
