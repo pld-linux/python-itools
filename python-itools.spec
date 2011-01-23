@@ -15,6 +15,8 @@ Source2:	http://www.ikaaro.org/download/itools/%{module}-examples.tar.gz
 # Source2-md5:	c9a9759752bf7bc606e8fc7b24282f6b
 URL:		http://www.ikaaro.org/
 BuildRequires:	python
+BuildRequires:	python-modules
+BuildRequires:	rpm-pythonprov
 %pyrequires_eq	python-modules
 Requires:	python-PyXML >= 0.8.2
 BuildArch:	noarch
