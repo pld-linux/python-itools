@@ -14,6 +14,7 @@ Source1:	http://www.ikaaro.org/documentation/%{module}-%{pdf_ver}.pdf
 Source2:	http://www.ikaaro.org/download/itools/%{module}-examples.tar.gz
 # Source2-md5:	c9a9759752bf7bc606e8fc7b24282f6b
 URL:		http://www.ikaaro.org/
+BuildRequires:	rpmbuild(macros) >= 1.710
 BuildRequires:	python
 BuildRequires:	python-modules
 BuildRequires:	rpm-pythonprov
